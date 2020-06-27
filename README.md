@@ -1,7 +1,7 @@
 # GeoFeature
 Geological Features in south west England
 
-Demo: https://geoffrowland.github.io/geofeature/
+Demo: https://geoffrowland.github.io/dorsetdswa/
 
 Not for navigational, planning or commercial use. Educational use only
 
