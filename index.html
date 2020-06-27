@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />	
-	<title>GeoFeature</title>
+	<title>Dorset DSWA Map</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.5.0/proj4.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -359,28 +359,7 @@
         minZoom: 4,
         maxNativeZoom: 17
 	});
-		
-	var holes = L.tileLayer('https://geo.nls.uk/mapdata3/os/25_inch/holes_england/{z}/{x}/{y}.png', {
-		format: 'image/png',
-        transparent: true,
-        opacity: 0.5,
-        minZoom: 11,
-        bounds: L.latLngBounds([[50.1, -4.69],[51.70, -0.7]])
-	});
-	var cornwall = L.tileLayer('https://geo.nls.uk/mapdata2/os/25_inch/cornwall/{z}/{x}/{y}.png', {
-		format: 'image/png',
-        transparent: true,
-        opacity: 0.5,
-        minZoom: 11,
-        bounds: L.latLngBounds([[49.875417441, -6.39116352],[50.94521927, -4.16]])
-	})
-	var cornwallholes = L.tileLayer('https://geo.nls.uk/mapdata3/os/25_inch/holes_england/{z}/{x}/{y}.png', {
-		format: 'image/png',
-        transparent: true,
-        opacity: 0.5,
-        minZoom: 11,
-        bounds: L.latLngBounds([[49.875417441, -6.39116352],[50.94521927, -4.40]])
-	})
+	
 	var dorset = L.tileLayer('https://geo.nls.uk/mapdata2/os/25_inch/dorset/{z}/{x}/{y}.png', {
 		format: 'image/png',
         transparent: true,
@@ -395,59 +374,7 @@
         minZoom: 11,
         bounds: L.latLngBounds([[50.51, -2.96],[51.09, -1.79]])
 	});
-	var devon = L.tileLayer('https://geo.nls.uk/mapdata2/os/25_inch/devon/{z}/{x}/{y}.png', {
-		format: 'image/png',
-        transparent: true,
-        opacity: 0.5,
-        minZoom: 11,
-        bounds: L.latLngBounds([[50.195, -4.68],[51.25, -2.857]])
-	});
-	var devonholes = L.tileLayer('https://geo.nls.uk/mapdata3/os/25_inch/holes_england/{z}/{x}/{y}.png', {
-		format: 'image/png',
-        transparent: true,
-        opacity: 0.5,
-        minZoom: 11,
-        bounds: L.latLngBounds([[50.195, -4.68],[51.25, -2.857]])
-	});
-	var hampshire = L.tileLayer('https://geo.nls.uk/mapdata2/os/25_inch/hampshire/{z}/{x}/{y}.png', {
-		format: 'image/png',
-        transparent: true,
-        opacity: 0.5,
-        minZoom: 11
-	});
-	var somerset = L.tileLayer('https://geo.nls.uk/mapdata3/os/25_inch/somerset/{z}/{x}/{y}.png', {
-		format: 'image/png',
-        transparent: true,
-        opacity: 0.5,
-        minZoom: 11,
-        bounds: L.latLngBounds([[50.82, -3.84],[51.52, -2.21]])
-	});
-	var somersetholes = L.tileLayer('https://geo.nls.uk/mapdata3/os/25_inch/holes_england/{z}/{x}/{y}.png', {
-		format: 'image/png',
-        transparent: true,
-        opacity: 0.5,
-        minZoom: 11,
-        bounds: L.latLngBounds([[50.82, -3.84],[51.52, -2.21]])
-	});
-	var wiltshire = L.tileLayer('https://geo.nls.uk/mapdata2/os/25_inch/wiltshire/{z}/{x}/{y}.png', {
-		format: 'image/png',
-        transparent: true,
-        opacity: 0.5,
-        minZoom: 11
-	});
-	var cornwall1900 = L.layerGroup([cornwallholes, cornwall],{
-		attribution: 'Historic OS maps © <a target = "_blank" href="https://maps.nls.uk/" title="National Library of Scotland">NLS</a>'
-    });
-	var devon1900 = L.layerGroup([devonholes, devon],{
-		attribution: 'Historic OS maps © <a target = "_blank" href="https://maps.nls.uk/" title="National Library of Scotland">NLS</a>'
-    });
-	var dorset1900 = L.layerGroup([dorsetholes, dorset],{
-		attribution: 'Historic OS maps © <a target = "_blank" href="https://maps.nls.uk/" title="National Library of Scotland">NLS</a>'
-    });
-	var somerset1900 = L.layerGroup([somersetholes, somerset],{
-		attribution: 'Historic OS maps © <a target = "_blank" href="https://maps.nls.uk/" title="National Library of Scotland">NLS</a>'
-    });
-	var county = L.layerGroup([holes, dorset, devon, hampshire, somerset, wiltshire],{
+    var dorset1900 = L.layerGroup([dorsetholes, dorset],{
 		attribution: 'Historic OS maps © <a target = "_blank" href="https://maps.nls.uk/" title="National Library of Scotland">NLS</a>'
     });
     var parish = L.geoJSON(dorsetParish,{
@@ -523,7 +450,7 @@
 	    popupAnchor: [1, -34],
 	    shadowSize: [41, 41]
     });
-    var ridgewayData = L.geoJson(null, {
+    var siteData = L.geoJson(null, {
 		pointToLayer: function (feature, latlng) {
 			if (feature.properties.Type == 'Kiln'){
 			    return L.marker(latlng, {icon: redIcon})
@@ -576,7 +503,8 @@
     map.attributionControl.addAttribution('<a target="_blank" title="Open Source Geospatial Foundation" href="https://www.osgeo.org/">OSGeo</a> <a target="_blank" href="https://gdal.org/">GDAL</a>, <a target="_blank">QGIS</a>, &copy; Geoff Rowland copyright and database rights 2020');
 	map.attributionControl.addAttribution('EDINA <a href="https://digimap.edina.ac.uk/" target="_blank">Digimap</a>');
 	
-	var ridgeway = omnivore.csv('ridgeway.csv', null, ridgewayData).on('ready', function() {}).addTo(map);
+    var site = omnivore.csv('site.csv', null, siteData).on('ready', function() {}).addTo(map);
+	
     var geolin = L.layerGroup([faults, dykes, bgs50lin], {
 		attribution: '<a target="_blank" href = "https://www.bgs.ac.uk/data/services/wms.html" title="British Geological Survey">BGS</a> maps © UKRI 2020'
 	}).addTo(map);
@@ -609,17 +537,14 @@
 		"OS Current": os,
 		"OS OpenData": opendataonly,
 		"OpenStreetMap": osm,
-		"OS Cornwall ~1900": cornwall1900,
-		"OS Devon ~1900": devon1900,
 		"OS Dorset ~1900": dorset1900,
-		"OS Somerset ~1900": somerset1900,
 		"Geology Bedrock": geobed,
 		"Geology Surface": geosup,
 		"Geology Landslip": bgs50mass,
 		"Geology Artificial": bgs50art,
 		"Geology Linear": geolin,
 		"Parish": parish,
-		"Features": ridgeway
+		"Site": site
 	};
     var allMapLayers = { 
 		'terraindtm': terraindtm,
@@ -640,7 +565,7 @@
 		'bgs50art': bgs50art,
 		'geolin': geolin,
 		'parish': parish,
-		'ridgeway': ridgeway
+		'site': site
 	};
     var osmGeocoder = new L.Control.OSMGeocoder();
     map.addControl(osmGeocoder);
