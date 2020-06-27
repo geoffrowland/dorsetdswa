@@ -391,14 +391,14 @@
 	var faults = L.geoJSON(faultsUK,{
         "color": "#000000",
         "weight": 1,
-        "opacity": 0,
+        "opacity": 1,
         "dashArray": "10 2",
         "fillOpacity": 0
 	});
 	var dykes = L.geoJSON(dykesUK,{
         "color": "#FF0000",
         "weight": 1,
-        "opacity": 0,
+        "opacity": 1,
         "dashArray": "10 2",
         "fillOpacity": 0
 	});
@@ -452,7 +452,7 @@
     });
     var siteData = L.geoJson(null, {
 		pointToLayer: function (feature, latlng) {
-			if (feature.properties.Type == 'Kiln'){
+			if (feature.properties.Type == 'Dry Stone Walling Centre'){
 			    return L.marker(latlng, {icon: redIcon})
 			}else if(feature.properties.Type == 'Chalk'){
 				return L.marker(latlng, {icon: greenIcon})
