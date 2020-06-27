@@ -1,5 +1,5 @@
 # Dorset DSWA Map
-Walling-related features in Dorset
+Dry Stone Walling-related features in Dorset
 
 Demo: https://geoffrowland.github.io/dorsetdswa/
 
