@@ -1,5 +1,5 @@
-# GeoFeature
-Geological Features in south west England
+# Dorset DSWA Map
+Walling-related features in Dorset
 
 Demo: https://geoffrowland.github.io/dorsetdswa/
 
