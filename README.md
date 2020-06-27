@@ -5,7 +5,7 @@ Demo: https://geoffrowland.github.io/dorsetdswa/
 
 Not for navigational, planning or commercial use. Educational use only
 
-This web map provides a high-resolution hillshade terrain map for east Devon, Dorset Somerset and adjoining regions.
+This web map includes a composite high-resolution hillshade base-map layer for Dorset and adjoining regions.
 
 &copy; Geoff Rowland Copyright and database rights 2020
 
