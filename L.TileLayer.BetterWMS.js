@@ -200,20 +200,21 @@ L.TileLayer.BetterWMS = L.TileLayer.WMS.extend({
         age1 = bedrock[1].split(";")[31];
         age2 = bedrock[1].split(";")[32];
         if (age1 == age2) {age = age1} else {age = age1 + ' to ' + age2};
-        if (age != '') {age = '<br/>Age: ' + age}; 
+        
         period1 = bedrock[1].split(";")[45];
         period2 = bedrock[1].split(";")[46];
         if (period1 == period2) {period = period1} else {period = period1 + ' to ' + period2};
-        if (period != '') {period = '<br/>Period: ' + period}; 
-	name = bedrock[1].split(";")[30];
-        if (name != '') {name = 'Bedrock: ' + name};  
+        name = bedrock[1].split(";")[30];
         type = bedrock[1].split(";")[47];
         if (type != '') {
 		type = type[0].toUpperCase() + type.slice(1);
 		type = '<br/>Type: ' + type
 	};
-	if (name == 'WEST PARK FARM MEMBER - CLAY') {name = 'UPNOR FORMATION AND READING FORMATION (UNDIFFERENTIATED) - CLAY<br />(WEST PARK FARM MEMBER - CLAY)'; age = 'THANETIAN TO YPRESIAN'}; 
-        desc = bedrock[1].split(";")[48];
+	if (name == 'WEST PARK FARM MEMBER - CLAY') {name = 'UPNOR FORMATION AND READING FORMATION (UNDIFFERENTIATED) - CLAY<br />(WEST PARK FARM MEMBER - CLAY)'; age = 'THANETIAN to YPRESIAN'}; 
+        if (name != '') {name = 'Bedrock: ' + name};
+	if (age != '') {age = '<br/>Age: ' + age}; 
+	if (period != '') {period = '<br/>Period: ' + period}; 
+	desc = bedrock[1].split(";")[48];
         if (desc != '') {
             desc = desc[0].toUpperCase() + desc.slice(1);			
 			desc = '<br/>Description: ' + desc
