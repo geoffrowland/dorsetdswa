@@ -210,6 +210,7 @@ L.TileLayer.BetterWMS = L.TileLayer.WMS.extend({
 		type = type[0].toUpperCase() + type.slice(1);
 		type = '<br/>Type: ' + type
 	};
+	if (name == 'POOLE FORMATION - SAND, SILT AND CLAY') {name = 'POOLE FORMATION - SAND, SILT AND CLAY<br />THAMES GROUP'};
 	if (name == 'POOLE FORMATION - CLAY') {name = 'POOLE FORMATION - CLAY<br />THAMES GROUP'};
 	if (name == 'POOLE FORMATION - SAND AND GRAVEL') {name = 'POOLE FORMATION - SAND AND GRAVEL<br />THAMES GROUP'};
 	if (name == 'POOLE FORMATION - SAND') {name = 'POOLE FORMATION - SAND<br />THAMES GROUP'};
