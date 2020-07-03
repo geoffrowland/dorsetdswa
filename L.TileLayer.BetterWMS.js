@@ -210,7 +210,8 @@ L.TileLayer.BetterWMS = L.TileLayer.WMS.extend({
 		type = type[0].toUpperCase() + type.slice(1);
 		type = '<br/>Type: ' + type
 	};
-	if (name == 'WEST PARK FARM MEMBER - CLAY') {name = 'UPNOR FORMATION AND READING FORMATION (UNDIFFERENTIATED) - CLAY<br />(WEST PARK FARM MEMBER - CLAY)'; age = 'THANETIAN to YPRESIAN'}; 
+	if (name == 'WEST PARK FARM MEMBER - SAND') {name = 'KIMBRIDGE MEMBER - SAND<br />WEST PARK FARM MEMBER - SAND)<br />HARWICH FORMATION<br />THAMES GROUP'; age = 'YPRESIAN'; period = 'EOCENE'};     
+	if (name == 'WEST PARK FARM MEMBER - CLAY') {name = 'UPNOR FORMATION AND READING FORMATION (UNDIFFERENTIATED) - CLAY<br />(WEST PARK FARM MEMBER - CLAY)<br />LAMBETH GROUP'; age = 'THANETIAN to YPRESIAN'; period = 'PALEOCENE to EOCENE'}; 
         if (name != '') {name = 'Bedrock: ' + name};
 	if (age != '') {age = '<br/>Age: ' + age}; 
 	if (period != '') {period = '<br/>Period: ' + period}; 
