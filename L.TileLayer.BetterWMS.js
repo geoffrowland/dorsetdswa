@@ -210,6 +210,9 @@ L.TileLayer.BetterWMS = L.TileLayer.WMS.extend({
 		type = type[0].toUpperCase() + type.slice(1);
 		type = '<br/>Type: ' + type
 	};
+	if (name == 'POOLE FORMATION - CLAY') {name = 'POOLE FORMATION - CLAY<br />THAMES GROUP'};
+	if (name == 'POOLE FORMATION - SAND AND GRAVEL') {name = 'POOLE FORMATION - SAND AND GRAVEL<br />THAMES GROUP'};
+	if (name == 'POOLE FORMATION - SAND') {name = 'POOLE FORMATION - SAND<br />THAMES GROUP'};
 	if (name == 'LYTCHETT MATRAVERS SAND MEMBER - SAND') {name = 'LYTCHETT MATRAVERS SAND MEMBER - SAND<br />LONDON CLAY FORMATION<br />THAMES GROUP'};    
 	if (name == 'WARMWELL FARM SAND MEMBER - SAND') {name = 'KIMBRIDGE MEMBER AND TILEHURST MEMBER (UNDIFFERENTIATED) - SAND<br />(WARMWELL FARM SAND MEMBER - SAND)<br />HARWICH FORMATION<br />THAMES GROUP'; age = 'YPRESIAN'; period = 'EOCENE'};     
 	if (name == 'WEST PARK FARM MEMBER - SAND') {name = 'KIMBRIDGE MEMBER - SAND<br />(WEST PARK FARM MEMBER - SAND)<br />HARWICH FORMATION<br />THAMES GROUP'; age = 'YPRESIAN'; period = 'EOCENE'};     
