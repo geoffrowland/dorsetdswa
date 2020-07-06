@@ -485,6 +485,15 @@
             );
         }
     });
+    // FeatureGroup is to store editable layers
+     var drawnItems = new L.FeatureGroup();
+     map.addLayer(drawnItems);
+     var drawControl = new L.Control.Draw({
+         edit: {
+             featureGroup: drawnItems
+         }
+     });
+     map.addControl(drawControl);
 	var map = L.map('map', {
 		center: [50.74, -2.50],
 		minZoom: 4,
@@ -537,7 +546,8 @@
 		"Geology Artificial": bgs50art,
 		"Geology Linear": geolin,
 		"Parish": parish,
-		"Site": site
+		"Site": site,
+		"Draw": drawnItems
 	};
     var allMapLayers = { 
 		'terraindtm': terraindtm,
@@ -557,7 +567,8 @@
 		'bgs50art': bgs50art,
 		'geolin': geolin,
 		'parish': parish,
-		'site': site
+		'site': site,
+	        'drawnItems': drawnItems
 	};
     var osmGeocoder = new L.Control.OSMGeocoder();
     map.addControl(osmGeocoder);
@@ -571,15 +582,6 @@
 		prefix:'Lng-Lat: ',
 		position:'bottomright'
 	}).addTo(map);
-    // FeatureGroup is to store editable layers
-     var drawnItems = new L.FeatureGroup();
-     map.addLayer(drawnItems);
-     var drawControl = new L.Control.Draw({
-         edit: {
-             featureGroup: drawnItems
-         }
-     });
-     map.addControl(drawControl);
 	//L.hash(map, allMapLayers);
 </script>
 </body>
