@@ -365,6 +365,7 @@
         transparent: true,
         opacity: 0.5,
         minZoom: 11,
+	maxNativeZoom: 18,
         bounds: L.latLngBounds([[50.51, -2.96],[51.09, -1.79]])
 	});
 	var dorsetholes = L.tileLayer('https://geo.nls.uk/mapdata3/os/25_inch/holes_england/{z}/{x}/{y}.png', {
@@ -372,6 +373,7 @@
         transparent: true,
         opacity: 0.5,
         minZoom: 11,
+	maxNativeZoom: 18,
         bounds: L.latLngBounds([[50.51, -2.96],[51.09, -1.79]])
 	});
     var dorset1900 = L.layerGroup([dorsetholes, dorset],{
