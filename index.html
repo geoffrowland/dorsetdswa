@@ -485,15 +485,6 @@
             );
         }
     });
-    // FeatureGroup is to store editable layers
-     var drawnItems = new L.FeatureGroup();
-     map.addLayer(drawnItems);
-     var drawControl = new L.Control.Draw({
-         edit: {
-             featureGroup: drawnItems
-         }
-     });
-     map.addControl(drawControl);
 	var map = L.map('map', {
 		center: [50.74, -2.50],
 		minZoom: 4,
@@ -504,6 +495,16 @@
 	});
     map.attributionControl.addAttribution('<a target="_blank" title="Open Source Geospatial Foundation" href="https://www.osgeo.org/">OSGeo</a> <a target="_blank" href="https://gdal.org/">GDAL</a>, <a target="_blank">QGIS</a>, &copy; Geoff Rowland copyright and database rights 2020');
 	map.attributionControl.addAttribution('EDINA <a href="https://digimap.edina.ac.uk/" target="_blank">Digimap</a>');
+	
+    // FeatureGroup is to store editable layers
+     var drawnItems = new L.FeatureGroup();
+     map.addLayer(drawnItems);
+     var drawControl = new L.Control.Draw({
+         edit: {
+             featureGroup: drawnItems
+         }
+     });
+     map.addControl(drawControl);
 	
     var site = omnivore.csv('site.csv', null, siteData).on('ready', function() {}).addTo(map);
 	
