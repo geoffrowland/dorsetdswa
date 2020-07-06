@@ -571,6 +571,15 @@
 		prefix:'Lng-Lat: ',
 		position:'bottomright'
 	}).addTo(map);
+    // FeatureGroup is to store editable layers
+     var drawnItems = new L.FeatureGroup();
+     map.addLayer(drawnItems);
+     var drawControl = new L.Control.Draw({
+         edit: {
+             featureGroup: drawnItems
+         }
+     });
+     map.addControl(drawControl);
 	//L.hash(map, allMapLayers);
 </script>
 </body>
