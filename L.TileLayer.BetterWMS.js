@@ -308,9 +308,11 @@ L.TileLayer.BetterWMS = L.TileLayer.WMS.extend({
 	if (name == 'HELSBY SANDSTONE FORMATION - SANDSTONE') {name = 'HELSBY SANDSTONE FORMATION (OTTER SANDSTONE FORMATION) - SANDSTONE<br />SHERWOOD SANDSTONE GROUP'};
 	if (name == 'CHESTER FORMATION - CONGLOMERATE') {name = 'CHESTER FORMATION (BUDLEIGH SALTERTON PEBBLE BEDS FORMATION) - CONGLOMERATE<br />SHERWOOD SANDSTONE GROUP'};
         if (name == 'LITTLEHAM MUDSTONE FORMATION - MUDSTONE') {name = name + '<br />AYLESBEARE GROUP'; age = 'WUCHIAPINGIAN'; period = 'PERMIAN'};
-        if (name == 'EXMOUTH MUDSTONE AND SANDSTONE FORMATION - SANDSTONE') {name = name + '<br />AYLESBEARE GROUP'; age = 'CAPITANIAN TO WUCHIAPINGIAN'; period = 'PERMIAN'};	    
-        if (name == 'EXMOUTH MUDSTONE AND SANDSTONE FORMATION - MUDSTONE') {name = name + '<br />AYLESBEARE GROUP'; age = 'CAPITANIAN TO WUCHIAPINGIAN'; period = 'PERMIAN'};	    
-        if (name == 'EXE BRECCIA FORMATION - BRECCIA') {age = 'WORDIAN'; period = 'PERMIAN'};
+        if (name == 'EXMOUTH MUDSTONE AND SANDSTONE FORMATION - SANDSTONE') {name = name + '<br />AYLESBEARE MUDSTONE GROUP'; age = 'CAPITANIAN TO WUCHIAPINGIAN'; period = 'PERMIAN'};	    
+        if (name == 'EXMOUTH MUDSTONE AND SANDSTONE FORMATION - MUDSTONE') {name = name + '<br />AYLESBEARE MUDSTONE GROUP'; age = 'CAPITANIAN TO WUCHIAPINGIAN'; period = 'PERMIAN'};	    
+        if (name == 'AYLESBEARE MUDSTONE GROUP - SANDSTONE') {age = 'CAPITANIAN TO WUCHIAPINGIAN'; period = 'PERMIAN'};
+        if (name == 'AYLESBEARE MUDSTONE GROUP - MUDSTONE') {age = 'CAPITANIAN TO WUCHIAPINGIAN'; period = 'PERMIAN'};
+	if (name == 'EXE BRECCIA FORMATION - BRECCIA') {age = 'WORDIAN'; period = 'PERMIAN'};
 //	if (name == '') {name = ''; age = ''; period = ''};
 //	    
         if (name != '') {name = 'Bedrock: ' + name};
