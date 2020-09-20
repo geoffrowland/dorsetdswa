@@ -220,7 +220,7 @@ L.TileLayer.BetterWMS = L.TileLayer.WMS.extend({
 	if (name == 'BARTON CLAY FORMATION - CLAY') {name = name + '<br />BARTON GROUP'};  
 	if (name == 'BOSCOMBE SAND FORMATION - CLAY') {name = name + '<br />BARTON GROUP'};   	    
 //
-	if (name == 'CREECH BARROW LIMESTONE MEMBER - LIMESTONE') {name = name + '<br />BRANKSOME SAND FORMATION<br />BRACKLESHAM GROUP'};
+	if (name == 'CREECH BARROW LIMESTONE MEMBER - LIMESTONE') {name = name + '<br />CREECH BARROW LIMESTONE FORMATION<br />BRACKLESHAM GROUP'};
 	if (name == 'CREECH BRICK CLAY MEMBER - CLAY') {name = name + '<br />BRANKSOME SAND FORMATION<br />BRACKLESHAM GROUP'};
 	if (name == 'BRANKSOME SAND FORMATION - CLAY') {name = name + '<br />BRACKLESHAM GROUP'};   
         if (name == 'BRANKSOME SAND FORMATION - SAND') {name = name + '<br />BRACKLESHAM GROUP'};
