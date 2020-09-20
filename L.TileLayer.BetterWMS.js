@@ -210,10 +210,35 @@ L.TileLayer.BetterWMS = L.TileLayer.WMS.extend({
 		type = type[0].toUpperCase() + type.slice(1);
 		type = '<br/>Type: ' + type
 	};
-	if (name == 'POOLE FORMATION - SAND, SILT AND CLAY') {name = 'POOLE FORMATION - SAND, SILT AND CLAY<br />BRACKLESHAM GROUP'};
-	if (name == 'POOLE FORMATION - CLAY') {name = 'POOLE FORMATION - CLAY<br />BRACKLESHAM GROUP'};
+	if (name == 'LYNDHURST MEMBER - SAND, SILT AND CLAY') {name = name + '<br />HEADON FORMATION'};
+//
+	if (name == 'BECTON BUNNY MEMBER - CLAY') {name = name + 'BECTON SAND FORMATION<br />BARTON GROUP'};
+        if (name == 'BECTON SAND FORMATION - SAND') {name = name + '<br />BARTON GROUP'};
+        if (name == 'CHAMA SAND FORMATION - SAND, SILT AND CLAY') {name = name + '<br />BARTON GROUP'};
+	if (name == 'BECTON SAND FORMATION AND CHAMA SAND FORMATION (UNDIFFERENTIATED) - SAND, SILT AND CLAY') {name = name + '<br />BARTON GROUP'};    
+	if (name == 'WARREN HILL SAND MEMBER - SAND') {name = name + '<br>BARTON CLAY FORMATION<br />BARTON GROUP'};  
+	if (name == 'BARTON CLAY FORMATION - CLAY') {name = name + '<br />BARTON GROUP'};  
+	if (name == 'BOSCOMBE SAND FORMATION - CLAY') {name = name + '<br />BARTON GROUP'};   	    
+//
+	if (name == 'CREECH BARROW LIMESTONE MEMBER - LIMESTONE') {name = name + '<br />BRANKSOME SAND FORMATION<br />BRACKLESHAM GROUP'};
+	if (name == 'CREECH BRICK CLAY MEMBER - CLAY') {name = name + '<br />BRANKSOME SAND FORMATION<br />BRACKLESHAM GROUP'};
+	if (name == 'BRANKSOME SAND FORMATION - CLAY') {name = name + '<br />BRACKLESHAM GROUP'};   
+        if (name == 'BRANKSOME SAND FORMATION - SAND') {name = name + '<br />BRACKLESHAM GROUP'};
+	if (name == 'PARKSTONE CLAY MEMBER - CLAY') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};	    
+	if (name == 'PARKSTONE SAND MEMBER - SAND') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
+	if (name == 'BROADSTONE SAND MEMBER - SAND') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
+	if (name == 'BROADSTONE CLAY MEMBER - CLAY, SILTY') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
+//	if (name == 'BROADSTONE CLAY MEMBER - SAND') {name = 'BROADSTONE SAND MEMBER - SAND<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};   
+	if (name == 'OAKDALE CLAY MEMBER - CLAY') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
+        if (name == 'OAKDALE CLAY MEMBER - SAND') {name = 'OAKDALE SAND MEMBER - SAND<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
+	if (name == 'BROADSTONE SAND MEMBER AND OAKDALE SAND MEMBER (UNDIFFERENTIATED) - SAND') {name = name + '<br />POOLE FORMATIONY<br />BRACKLESHAM GROUP'}; 
+	if (name == 'CREEKMOOR CLAY MEMBER - CLAY') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
+        if (name == 'CREEKMOOR SAND MEMBER - SAND') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};  
+	if (name == 'POOLE FORMATION - SAND, SILT AND CLAY') {name = name + '<br />BRACKLESHAM GROUP'};
+	if (name == 'POOLE FORMATION - CLAY') {name = name + '<br />BRACKLESHAM GROUP'};
 	if (name == 'POOLE FORMATION - SAND AND GRAVEL') {name = 'POOLE FORMATION - SAND AND GRAVEL<br />BRACKLESHAM GROUP'};
 	if (name == 'POOLE FORMATION - SAND') {name = 'POOLE FORMATION - SAND<br />BRACKLESHAM GROUP'};
+//
 	if (name == 'LONDON CLAY FORMATION - SAND') {name = 'LONDON CLAY FORMATION - SAND<br />THAMES GROUP'};	
 	if (name == 'LONDON CLAY FORMATION - CLAY, SILT AND SAND') {name = 'LONDON CLAY FORMATION - CLAY, SILT AND SAND<br />THAMES GROUP'};
 	if (name == 'LYTCHETT MATRAVERS SAND MEMBER - SAND') {name = 'LYTCHETT MATRAVERS SAND MEMBER - SAND<br />LONDON CLAY FORMATION<br />THAMES GROUP'};    
