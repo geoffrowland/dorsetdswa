@@ -228,9 +228,10 @@ L.TileLayer.BetterWMS = L.TileLayer.WMS.extend({
 	if (name == 'PARKSTONE SAND MEMBER - SAND') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
 	if (name == 'BROADSTONE SAND MEMBER - SAND') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
 	if (name == 'BROADSTONE CLAY MEMBER - CLAY, SILTY') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
-//	if (name == 'BROADSTONE CLAY MEMBER - SAND') {name = 'BROADSTONE SAND MEMBER - SAND<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};   
+  	if (name == 'BROADSTONE CLAY MEMBER - SAND') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
+        if (name == 'OAKDALE CLAY MEMBER - SAND') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};	    
 	if (name == 'OAKDALE CLAY MEMBER - CLAY') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
-        if (name == 'OAKDALE CLAY MEMBER - SAND') {name = 'OAKDALE SAND MEMBER - SAND<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
+        if (name == 'OAKDALE SAND MEMBER - SAND') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
 	if (name == 'BROADSTONE SAND MEMBER AND OAKDALE SAND MEMBER (UNDIFFERENTIATED) - SAND') {name = name + '<br />POOLE FORMATIONY<br />BRACKLESHAM GROUP'}; 
 	if (name == 'CREEKMOOR CLAY MEMBER - CLAY') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};
         if (name == 'CREEKMOOR SAND MEMBER - SAND') {name = name + '<br />POOLE FORMATION<br />BRACKLESHAM GROUP'};  
