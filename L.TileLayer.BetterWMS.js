@@ -210,15 +210,17 @@ L.TileLayer.BetterWMS = L.TileLayer.WMS.extend({
 		type = type[0].toUpperCase() + type.slice(1);
 		type = '<br/>Type: ' + type
 	};
-	if (name == 'LYNDHURST MEMBER - SAND, SILT AND CLAY') {name = name + '<br />HEADON FORMATION'};
+	if (name == 'LYNDHURST MEMBER - SAND, SILT AND CLAY') {name = name + '<br />HEADON FORMATION<br />SOLENT GROUP'};
+	if (name == 'HEADON FORMATION - CLAY, SILT AND SAND') {name = name + '<br />SOLENT GROUP'};
 //
-	if (name == 'BECTON BUNNY MEMBER - CLAY') {name = name + 'BECTON SAND FORMATION<br />BARTON GROUP'};
+	if (name == 'BECTON BUNNY MEMBER - CLAY') {name = name + '<br />BECTON SAND FORMATION<br />BARTON GROUP'};
         if (name == 'BECTON SAND FORMATION - SAND') {name = name + '<br />BARTON GROUP'};
         if (name == 'CHAMA SAND FORMATION - SAND, SILT AND CLAY') {name = name + '<br />BARTON GROUP'};
 	if (name == 'BECTON SAND FORMATION AND CHAMA SAND FORMATION (UNDIFFERENTIATED) - SAND, SILT AND CLAY') {name = name + '<br />BARTON GROUP'};    
 	if (name == 'WARREN HILL SAND MEMBER - SAND') {name = name + '<br>BARTON CLAY FORMATION<br />BARTON GROUP'};  
 	if (name == 'BARTON CLAY FORMATION - CLAY') {name = name + '<br />BARTON GROUP'};  
-	if (name == 'BOSCOMBE SAND FORMATION - CLAY') {name = name + '<br />BARTON GROUP'};   	    
+	if (name == 'BOSCOMBE SAND FORMATION - CLAY') {name = name + '<br />BARTON GROUP'};
+	if (name == 'BOSCOMBE SAND FORMATION - SAND') {name = name + '<br />BARTON GROUP'};  
 //
 	if (name == 'CREECH BARROW LIMESTONE MEMBER - LIMESTONE') {name = name + '<br />CREECH BARROW LIMESTONE FORMATION<br />BRACKLESHAM GROUP'};
 	if (name == 'CREECH BRICK CLAY MEMBER - CLAY') {name = name + '<br />BRANKSOME SAND FORMATION<br />BRACKLESHAM GROUP'};
