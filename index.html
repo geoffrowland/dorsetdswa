@@ -361,6 +361,73 @@
         minZoom: 4,
         maxNativeZoom: 17
 	});
+	var dorset1 = L.tileLayer('https://github.com/geoffrowland/OS-First-Dorset-1/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 1.0,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 12,
+		maxZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset2 = L.tileLayer('https://github.com/geoffrowland/OS-First-Dorset-2/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 1.0,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 12,
+		maxZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset3 = L.tileLayer('https://github.com/geoffrowland/OS-First-Dorset-3/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 1.0,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 12,
+		maxZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset4 = L.tileLayer('https://github.com/geoffrowland/OS-First-Dorset-4/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 1.0,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 12,
+		maxZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset5 = L.tileLayer('https://github.com/geoffrowland/OS-First-Dorset-5/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 1.0,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 12,
+		maxZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset6 = L.tileLayer('https://github.com/geoffrowland/OS-First-Dorset-6/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 1.0,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 12,
+		maxZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset7 = L.tileLayer('https://github.com/geoffrowland/OS-First-Dorset-7/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 1.0,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 12,
+		maxZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset8 = L.tileLayer('https://github.com/geoffrowland/OS-First-Dorset-8/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 1.0,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 12,
+		maxZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset1880 = L.layerGroup([dorset1, dorset2, dorset3, dorset4, dorset5, dorset6, dorset7, dorset8],{
+		attribution: '© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88'
+        });
 	
 	var dorset = L.tileLayer('https://geo.nls.uk/mapdata2/os/25_inch/dorset/{z}/{x}/{y}.png', {
 		format: 'image/png',
@@ -570,6 +637,7 @@
 		"OS Current": os,
 		"OS OpenData": opendataonly,
 		"OpenStreetMap": osm,
+		"OS Dorset ~1880": dorset1880,
 		"OS Dorset ~1900": dorset1900,
 		"Geology Bedrock": geobed,
 		"Geology Surface": geosup,
@@ -590,6 +658,7 @@
 		'opendataonly': opendataonly,
 		'osm': osm,
 		'osmbase': osmbase,
+	    	'dorset1880': dorset1880,
 		'dorset1900': dorset1900,
 		'aerialtransp': aerialtransp,
 		'geobed': geobed,
