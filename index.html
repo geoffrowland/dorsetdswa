@@ -361,6 +361,14 @@
         minZoom: 4,
         maxNativeZoom: 17
 	});
+	var dorsettithe = L.tileLayer('https://geoffrowland.github.io/dorsettithe/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 0.5,
+		attribution: "© <a href='https://www.dorsetcouncil.gov.uk/libraries-history-culture/dorset-history-centre/' target='_blank'>Dorset History Centre</a>",
+		minZoom: 12,
+		maxZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
 	var dorset1 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-1/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 0.5,
@@ -637,8 +645,9 @@
 		"<span title = 'Bing Maps OS Current'>OS Current</span>": os,
 		"<span title = 'OS OpenData'>OS OpenData</span>": opendataonly,
 		"<span title = 'OpenStreetMap'>OpenStreetMap</span>": osm,
-		"<span title = 'OS First Edition 25 inch ~1880'>OS Dorset ~1880</span>": dorset1880,
 		"<span title = 'OS Second Edition 25 inch ~1900'>OS Dorset ~1900</span>": dorset1900,
+		"<span title = 'OS First Edition 25 inch ~1880'>OS Dorset ~1880</span>": dorset1880,
+		"<span title = 'Tithe Dorset ~1840'>Tithe Dorset ~1840</span>": dorsettithe,
 		"<span title = 'BGS Geology Bedrock'>Geology Bedrock</span>": geobed,
 		"<span title = 'BGS Geology Superficial'>Geology Surface</span>": geosup,
 		"<span title = 'BGS Geology Mass Movement'>Geology Landslip</span>": bgs50mass,
@@ -658,8 +667,9 @@
 		'opendataonly': opendataonly,
 		'osm': osm,
 		'osmbase': osmbase,
-	    	'dorset1880': dorset1880,
 		'dorset1900': dorset1900,
+	    'dorset1880': dorset1880,
+        'dorsettithe': dorsettithe,
 		'aerialtransp': aerialtransp,
 		'geobed': geobed,
 		'geosup': geosup,
@@ -668,7 +678,7 @@
 		'geolin': geolin,
 		'parish': parish,
 		'site': site,
-	        'drawnItems': drawnItems
+	    'drawnItems': drawnItems
 	};
     var osmGeocoder = new L.Control.OSMGeocoder();
     map.addControl(osmGeocoder);
