@@ -437,7 +437,7 @@
 		tms: true,
 		opacity: 1.0,
                 attribution: '&copy <a title="Environment Agency LiDAR DTM" target="_blank" href="https://environment.data.gov.uk/DefraDataDownload/?Mode=survey">EA</a> copyright and database right 2020',
-		minZoom: 14,
+		minZoom: 12,
 		maxZoom: 18
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
@@ -582,7 +582,7 @@
 	});
     map.attributionControl.addAttribution('<a target="_blank" title="Open Source Geospatial Foundation" href="https://www.osgeo.org/">OSGeo</a> <a target="_blank" href="https://gdal.org/">GDAL</a>, <a target="_blank">QGIS</a>, &copy; Geoff Rowland copyright and database rights 2020');
 	map.attributionControl.addAttribution('EDINA <a href="https://digimap.edina.ac.uk/" target="_blank">Digimap</a>');
-	
+    surface.addTo(map);
     // FeatureGroup is to store editable layers
      var drawnItems = new L.FeatureGroup();
      map.addLayer(drawnItems);
