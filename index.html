@@ -62,13 +62,13 @@
     var google = L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
 		subdomains:['mt0','mt1','mt2','mt3'],
         attribution: 'Imagery &copy; 2021 Google, Map data &copy; 2021 <a target="_blank" href="https://www.google.com/intl/en_uk/help/terms_maps/">Terms</a>',
-        maxZoom: 20
+        maxNativeZoom: 20
 	});
 	var googletransp = L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
 		subdomains:['mt0','mt1','mt2','mt3'],
         attribution: 'Imagery &copy; 2021 Google, Map data &copy; 2021 <a target="_blank" href="https://www.google.com/intl/en_uk/help/terms_maps/">Terms</a>',
         opacity: 0.5,
-        maxZoom: 20
+        maxNativeZoom: 20
 	});
 	var aerial = L.tileLayer.bing({
 		bingMapsKey: BING_KEY,
@@ -449,7 +449,8 @@
 		opacity: 1.0,
                 attribution: '&copy <a title="Environment Agency LiDAR DTM" target="_blank" href="https://environment.data.gov.uk/DefraDataDownload/?Mode=survey">EA</a> copyright and database right 2020',
 		minZoom: 12,
-		maxNativeZoom: 18
+		maxNativeZoom: 18,
+		maxZoom: 22
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var dorset1880 = L.layerGroup([dorset1, dorset2, dorset3, dorset4, dorset5, dorset6, dorset7, dorset8],{
