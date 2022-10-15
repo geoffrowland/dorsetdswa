@@ -385,8 +385,29 @@
 	});
 	
 	var pooledraw = L.tileLayer('https://maps.georeferencer.com/georeferences/2a003122-d8e0-5c9a-9135-ba3a0c4de08b/2020-03-24T13:44:13.120898Z/map/{z}/{x}/{y}.png?key=gMEmp7wGJTRoTdtU7Ljj', {
-	minZoom:10
+	minZoom:8
 	});
+	var weymouthdraw = L.tileLayer('https://maps.georeferencer.com/georeferences/7b59077f-bd21-500a-a8bb-6d594573d7a5/2020-07-07T09:43:25.211338Z/map/{z}/{x}/{y}.png?key=gMEmp7wGJTRoTdtU7Ljj', {
+	minZoom:8
+	});
+	var bridportdraw = L.tileLayer('https://maps.georeferencer.com/georeferences/c1ac8664-dee9-527d-a6b4-9824c490acf2/2020-03-31T12:13:19.952011Z/map/{z}/{x}/{y}.png?key=gMEmp7wGJTRoTdtU7Ljj', {
+	minZoom:8
+	});
+	var dorchesterdraw = L.tileLayer('https://maps.georeferencer.com/georeferences/cb3c28e4-31bc-51d7-8f57-fda0517a0ec7/2020-03-27T13:17:28.779313Z/map/{z}/{x}/{y}.png?key=gMEmp7wGJTRoTdtU7Ljj', {
+	minZoom:8
+	});
+	var beaminsterdraw = L.tileLayer('https://maps.georeferencer.com/georeferences/5ea792e9-f4b4-5a06-aaf0-527f90e4cb52/2020-04-02T09:58:58.720750Z/map/{z}/{x}/{y}.png?key=gMEmp7wGJTRoTdtU7Ljj', {
+	minZoom:8
+	});
+        var shebornedraw = L.tileLayer('https://maps.georeferencer.com/georeferences/52a2647d-e1fc-509e-8e38-fcb799c7e47d/2020-02-05T11:24:10.249311Z/map/{z}/{x}/{y}.png?key=gMEmp7wGJTRoTdtU7Ljj', {
+	minZoom:8
+	});
+	var southpethertondraw = L.tileLayer('https://maps.georeferencer.com/georeferences/3397eff3-62a4-5e58-be1e-9344e35b721f/2020-04-03T11:34:17.981564Z/map/{z}/{x}/{y}.png?key=gMEmp7wGJTRoTdtU7Ljj', {
+	minZoom:8
+	});
+	var dorset1800 = L.layerGroup([pooledraw, weymouthdraw, bridportdraw, dorchesterdraw, beaminsterdraw, sherbornedraw, southpethertondraw],{
+		attribution: '© British Library'
+        });
 	
 	var dorset1 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-1/{z}/{x}/{y}.png', {
 		tms: true,
@@ -680,7 +701,7 @@
 		"<span title = 'OS Second Edition 25 inch ~1900'>OS Dorset ~1900</span>": dorset1900,
 		"<span title = 'OS First Edition 25 inch ~1880'>OS Dorset ~1880</span>": dorset1880,
 		"<span title = 'Tithe Dorset ~1840'>Tithe Dorset ~1840</span>": dorsettithe,
-		"<span title = 'OS Drawings ~1800>OS Drawings ~1880</span>": pooledraw,
+		"<span title = 'OS Drawings ~1800>OS Drawings ~1880</span>": dorset1800,
 		"<span title = 'BGS Geology Bedrock'>Geology Bedrock</span>": geobed,
 		"<span title = 'BGS Geology Superficial'>Geology Surface</span>": geosup,
 		"<span title = 'BGS Geology Mass Movement'>Geology Landslip</span>": bgs50mass,
@@ -703,7 +724,7 @@
 		'dorset1900': dorset1900,
 	        'dorset1880': dorset1880,
                 'dorsettithe': dorsettithe,
-	        'pooledraw': pooledraw,
+	        'dorset1800': dorset1800,
 	 	'aerialtransp': aerialtransp,
 		'geobed': geobed,
 		'geosup': geosup,
