@@ -383,6 +383,11 @@
 		maxNativeZoom: 18
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
+	
+	var pooledraw = L.tileLayer('https://maps.georeferencer.com/georeferences/2a003122-d8e0-5c9a-9135-ba3a0c4de08b/2020-03-24T13:44:13.120898Z/map/{z}/{x}/{y}.png?key=gMEmp7wGJTRoTdtU7Ljj', {
+	minZoom:10
+	});
+	
 	var dorset1 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-1/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 0.5,
@@ -675,6 +680,7 @@
 		"<span title = 'OS Second Edition 25 inch ~1900'>OS Dorset ~1900</span>": dorset1900,
 		"<span title = 'OS First Edition 25 inch ~1880'>OS Dorset ~1880</span>": dorset1880,
 		"<span title = 'Tithe Dorset ~1840'>Tithe Dorset ~1840</span>": dorsettithe,
+		"<span title = 'OS Drawings ~1800</span>": pooledraw,
 		"<span title = 'BGS Geology Bedrock'>Geology Bedrock</span>": geobed,
 		"<span title = 'BGS Geology Superficial'>Geology Surface</span>": geosup,
 		"<span title = 'BGS Geology Mass Movement'>Geology Landslip</span>": bgs50mass,
@@ -695,9 +701,10 @@
 		'osm': osm,
 		'osmbase': osmbase,
 		'dorset1900': dorset1900,
-	    'dorset1880': dorset1880,
-        'dorsettithe': dorsettithe,
-		'aerialtransp': aerialtransp,
+	        'dorset1880': dorset1880,
+                'dorsettithe': dorsettithe,
+	        'pooledraw': pooledraw,
+	 	'aerialtransp': aerialtransp,
 		'geobed': geobed,
 		'geosup': geosup,
 		'bgs50mass': bgs50mass,
