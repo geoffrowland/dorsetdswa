@@ -407,6 +407,10 @@
 	inZoom: 10,
 	bounds: L.latLngBounds([[50.670146, -3.118205],[50.783829, -2.905233]])
 	});
+	var axminsterdraw = L.tileLayer('https://maps.georeferencer.com/georeferences/2e0efb6a-c265-5b68-9760-79c73682d293/2020-04-03T12:25:41.500877Z/map/{z}/{x}/{y}.png?key=gMEmp7wGJTRoTdtU7Ljj', {
+	inZoom: 10,
+	bounds: L.latLngBounds([[50.777302, -3.120531],[50.881457, -2.919498]])
+	});
         var dorchesterdraw = L.tileLayer('https://maps.georeferencer.com/georeferences/cb3c28e4-31bc-51d7-8f57-fda0517a0ec7/2020-03-27T13:17:28.779313Z/map/{z}/{x}/{y}.png?key=gMEmp7wGJTRoTdtU7Ljj', {
 	minZoom: 10,
 	bounds: L.latLngBounds([[50.653256, -2.557628],[50.851813, -2.097199]])
@@ -439,7 +443,7 @@
 	minZoom: 10,
 	bounds: L.latLngBounds([[50.829421, -2.95408],[51.066024, -2.585679]])	
 	});
-	var dorset1800 = L.layerGroup([christchurchdraw, pooledraw, weymouthdraw, bridportdraw, ilminsterdraw, axmouthdraw, dorchesterdraw, beaminsterdraw, sherbornedraw, wincantondraw, shaftesburydraw, berwickdraw, cranbornedraw, southpethertondraw],{
+	var dorset1800 = L.layerGroup([christchurchdraw, pooledraw, weymouthdraw, bridportdraw, ilminsterdraw, axmouthdraw, axminsterdraw, dorchesterdraw, beaminsterdraw, sherbornedraw, wincantondraw, shaftesburydraw, berwickdraw, cranbornedraw, southpethertondraw],{
 	attribution: '© British Library'
         });
 	
