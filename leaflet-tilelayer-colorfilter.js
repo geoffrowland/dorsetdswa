@@ -1,12 +1,12 @@
 /*
-  Leaflet.TileLayer.WMS.ColorFilter
+  Leaflet.TileLayer.ColorFilter
   (c) 2018, Claudio T. Kawakani
   A simple and lightweight Leaflet plugin to apply CSS filters on map tiles.
   https://github.com/xtk93x/Leaflet.TileLayer.ColorFilter
 */
-L.TileLayer.WMS.ColorFilter = L.TileLayer.WMS.extend({
+L.TileLayer.ColorFilter = L.TileLayer.extend({
 	intialize: function (url, options) {
-		L.TileLayer.WMS.prototype.initialize.call(this, url, options);
+		L.TileLayer.prototype.initialize.call(this, url, options);
 	},
 	colorFilter: function () {
 		let VALIDFILTERS = [
@@ -39,7 +39,7 @@ L.TileLayer.WMS.ColorFilter = L.TileLayer.WMS.extend({
 		return (filterSettings);
 	},
 	_initContainer: function () {
-		let tile = L.TileLayer.WMS.prototype._initContainer.call(this);
+		let tile = L.TileLayer.prototype._initContainer.call(this);
 		this._container.style.filter = this.colorFilter();
 	},
 	updateFilter: function (newFilter) {
@@ -50,6 +50,6 @@ L.TileLayer.WMS.ColorFilter = L.TileLayer.WMS.extend({
 	},
 })
 
-L.tileLayer.wms.colorFilter = function (url, options) {
-	return new L.TileLayer.WMS.ColorFilter(url, options);
+L.tileLayer.colorFilter = function (url, options) {
+	return new L.TileLayer.ColorFilter(url, options);
 }
