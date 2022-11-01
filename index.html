@@ -573,15 +573,28 @@
 		maxNativeZoom: 18
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
-	var surface = L.tileLayer('https://geoffrowland.github.io/Surface-Purbeck/{z}/{x}/{y}.png', {
+	var surfacepurbeck = L.tileLayer('https://geoffrowland.github.io/Surface-Purbeck/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 1.0,
-                attribution: '&copy <a title="Environment Agency LiDAR DTM" target="_blank" href="https://environment.data.gov.uk/DefraDataDownload/?Mode=survey">EA</a> copyright and database right 2020',
+                attribution: '&copy <a title="Environment Agency LiDAR DSM" target="_blank" href="https://environment.data.gov.uk/DefraDataDownload/?Mode=survey">EA</a> copyright and database right 2020',
 		minZoom: 12,
 		maxNativeZoom: 18,
 		maxZoom: 22
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
+	var surfaceridgeway = L.tileLayer('https://geoffrowland.github.io/Surface-1m-Ridgeway/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 1.0,
+                attribution: '&copy <a title="Environment Agency LiDAR DSM" target="_blank" href="https://environment.data.gov.uk/DefraDataDownload/?Mode=survey">EA</a> copyright and database right 2020',
+		minZoom: 12,
+		maxNativeZoom: 18,
+		maxZoom: 22
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var surface = L.layerGroup([surfacepurbeck, surfaceridgeway],{
+		attribution: '&copy <a title="Environment Agency LiDAR DSM" target="_blank" href="https://environment.data.gov.uk/DefraDataDownload/?Mode=survey">EA</a> copyright and database right 2020'
+        });
+	
 	var dorset1880 = L.layerGroup([dorset1, dorset2, dorset3, dorset4, dorset5, dorset6, dorset7, dorset8],{
 		attribution: '© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88'
         });
