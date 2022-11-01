@@ -600,7 +600,16 @@
 		maxZoom: 22
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
-	var surface = L.layerGroup([surfacepurbeck, surfaceridgeway, surfacesherborne],{
+	var surfaceportland = L.tileLayer('https://geoffrowland.github.io/Surface-1m-Portland/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 1.0,
+                attribution: '&copy <a title="Environment Agency LiDAR DSM" target="_blank" href="https://environment.data.gov.uk/DefraDataDownload/?Mode=survey">EA</a> copyright and database right 2020',
+		minZoom: 12,
+		maxNativeZoom: 17,
+		maxZoom: 22
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var surface = L.layerGroup([surfaceportland, surfacepurbeck, surfaceridgeway, surfacesherborne],{
 		attribution: '&copy <a title="Environment Agency LiDAR DSM" target="_blank" href="https://environment.data.gov.uk/DefraDataDownload/?Mode=survey">EA</a> copyright and database right 2020'
         });
 	
