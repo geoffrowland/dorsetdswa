@@ -28,6 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
     <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.2.2/FileSaver.js" integrity="sha512-SIK2pweRxy9wGNlXwGRi1NBOce/qyW1OXlSXbnCAOcdzW57TV7U+RvcoL3n3Sa4zr+qlvbWml8SRihjcggVmMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="SY68exogyraBeds.js"></script>
     <script src="dorsetParish.js"></script>
     <script src="faultsUK.js"></script>
@@ -812,8 +813,11 @@
         drawnItems.addLayer(layer);
       });
       L.easyButton('fa-download', function(btn, map){
-	  // Extract GeoJson from featureGroup
-          console.log(drawnItems.toGeoJSON());
+  var drawngeoJSON = drawn.toGeoJSON();
+  var file1 = filename + '.geojson';
+  saveAs(new File([JSON.stringify(drawngeoJSON)], file, {
+    type: "text/plain;charset=utf-8"
+  }), file1);
        }).addTo( map );
  	
     var site = omnivore.csv('site.csv', null, siteData).on('ready', function() {}).addTo(map);
