@@ -811,13 +811,13 @@
         var layer = event.layer;
         drawnItems.addLayer(layer);
       });
-        L.easyButton('fa-download', function(btn, map){
+      L.easyButton('fa-download', function(btn, map){
 	  // Extract GeoJson from featureGroup
-          var drawData = drawnItems.toGeoJSON();
+          // var drawData = drawnItems.toGeoJSON();
           // Stringify the GeoJson
-          var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(drawData));
-          console.log(convertedData);
-        }).addTo( map );
+          // var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(drawData));
+          console.log(drawnItems.toGeoJSON());
+       }).addTo( map );
  	
     var site = omnivore.csv('site.csv', null, siteData).on('ready', function() {}).addTo(map);
 	
