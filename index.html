@@ -813,10 +813,11 @@
       });
       L.easyButton('fa-download', function(btn, map){
 	  // Extract GeoJson from featureGroup
-          // var drawData = drawnItems.toGeoJSON();
-          // Stringify the GeoJson
-          // var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(drawData));
-          console.log(drawnItems.toGeoJSON());
+          var drawData = drawnItems.toGeoJSON();
+	  var file = filename + '.geojson';
+          saveAs(new File([JSON.stringify(drawData)], file, {
+             type: "text/plain;charset=utf-8"
+           }), file);
        }).addTo( map );
  	
     var site = omnivore.csv('site.csv', null, siteData).on('ready', function() {}).addTo(map);
