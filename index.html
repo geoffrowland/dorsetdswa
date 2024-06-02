@@ -811,7 +811,11 @@
         var layer = event.layer;
         drawnItems.addLayer(layer);
     });
-	
+    var helloPopup = L.popup().setContent('Hello World!');
+        L.easyButton('fa-globe', function(btn, map){
+        helloPopup.setLatLng(map.getCenter()).openOn(map);
+    }).addTo( map );
+ 	
     var site = omnivore.csv('site.csv', null, siteData).on('ready', function() {}).addTo(map);
 	
     var geolin = L.layerGroup([faults, dykes, bgs50lin], {
