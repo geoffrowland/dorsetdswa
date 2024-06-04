@@ -813,12 +813,9 @@
         drawnItems.addLayer(layer);
       });
       L.easyButton('fa-download', function(btn, map){
-  var drawngeoJSON = drawn.toGeoJSON();
-  var file1 = filename + '.geojson';
-  saveAs(new File([JSON.stringify(drawngeoJSON)], file, {
-    type: "text/plain;charset=utf-8"
-  }), file1);
-       }).addTo( map );
+          var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+          saveAs(blob, "hello world.txt");;
+      }).addTo( map );
  	
     var site = omnivore.csv('site.csv', null, siteData).on('ready', function() {}).addTo(map);
 	
