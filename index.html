@@ -812,11 +812,10 @@
         var layer = event.layer;
         drawnItems.addLayer(layer);
       });
-      var downloadData = drawnItems.toGeoJSON();
-	
       L.easyButton('fa-download', function(btn, map){
-          var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
-          saveAs(blob, "hello world.txt");
+	  var downloadData = drawnItems.toGeoJSON();
+          var blob = new Blob([downloadData], {type: "text/plain;charset=utf-8"});
+          saveAs(blob, "map.geojson");
       }).addTo( map );
  	
     var site = omnivore.csv('site.csv', null, siteData).on('ready', function() {}).addTo(map);
