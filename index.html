@@ -813,7 +813,7 @@
         drawnItems.addLayer(layer);
       });
       L.easyButton('fa-download', function(btn, map){
-	  var downloadData = JSON.stringify(drawnItems.toGeoJSON());
+	  var downloadData = JSON.stringify(drawnItems.toGeoJSON(), null, 2);
 	  var blob = new Blob([downloadData], {type: "text/json;charset=utf-8"});
           saveAs(blob, "map.geojson");
       }).addTo( map );
