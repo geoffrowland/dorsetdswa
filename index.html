@@ -780,6 +780,14 @@
     // FeatureGroup is to store editable layers
      var drawnItems = new L.FeatureGroup();
      map.addLayer(drawnItems);
+     L.Edit.Poly = L.Edit.Poly.extend({
+      options : {
+        icon: new L.DivIcon({
+             iconSize: new L.Point(5, 5),
+             className: 'leaflet-div-icon leaflet-editing-icon my-own-icon'
+        })
+       }
+      });
      var drawControl = new L.Control.Draw({
 	 			draw: {
 				polygon: {
@@ -815,14 +823,6 @@
      map.on(L.Draw.Event.CREATED, function (event) {
         var layer = event.layer;
         drawnItems.addLayer(layer)
-      }),
-      L.Edit.Poly = L.Edit.Poly.extend({
-      options : {
-        icon: new L.DivIcon({
-             iconSize: new L.Point(5, 5),
-             className: 'leaflet-div-icon leaflet-editing-icon my-own-icon'
-        })
-       }
       });
       L.easyButton('fa-download', function(btn, map){
 	  var downloadData = JSON.stringify(drawnItems.toGeoJSON(), null, 2);
@@ -907,16 +907,16 @@
     var osmGeocoder = new L.Control.OSMGeocoder();
     map.addControl(osmGeocoder);
     //L.Control.OSMGeocoder().addTo(map);
-	L.control.layers(baseLayers, overlays).addTo(map);
-	//var zoomHome = L.Control.zoomHome();
+    L.control.layers(baseLayers, overlays).addTo(map);
+    //var zoomHome = L.Control.zoomHome();
     //zoomHome.addTo(map);
-	L.control.scale().addTo(map);
+    L.control.scale().addTo(map);
     L.control.mousePosition({
-		lngFirst:true,
-		prefix:'Lng-Lat: ',
-		position:'bottomright'
-	}).addTo(map);
-	//L.hash(map, allMapLayers);
+	lngFirst:true,
+	prefix:'Lng-Lat: ',
+	position:'bottomright'
+    }).addTo(map);
+    //L.hash(map, allMapLayers);
 </script>
 </body>
 </html>
