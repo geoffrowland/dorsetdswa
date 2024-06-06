@@ -785,7 +785,7 @@
 				polygon: {
 					shapeOptions: {
 						color: 'purple'
-					},
+					}
 				},
 				polyline: {
 					icon: new L.DivIcon({
@@ -794,18 +794,18 @@
                                         }),
 					shapeOptions: {
 						color: 'red'
-					},
+					}
 				},
 				rect: {
 					shapeOptions: {
 						color: 'green'
-					},
+					}
 				},
 				circle: {
 					shapeOptions: {
 						color: 'steelblue'
-					},
-				},
+					}
+				}
 			},
          edit: {
              featureGroup: drawnItems
@@ -814,8 +814,8 @@
      map.addControl(drawControl);
      map.on(L.Draw.Event.CREATED, function (event) {
         var layer = event.layer;
-        drawnItems.addLayer(layer);
-      });
+        drawnItems.addLayer(layer)
+      }),
       L.Edit.Poly = L.Edit.Poly.extend({
       options : {
         icon: new L.DivIcon({
