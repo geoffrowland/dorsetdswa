@@ -811,14 +811,22 @@
              featureGroup: drawnItems
          }
      });
-     drawControl.setDrawingOptions(
-     polyline: {
+L.Edit.Poly = L.Edit.Poly.extend({
+    options : {
         icon: new L.DivIcon({
-            iconSize: new L.Point(5, 5),
-            className: 'leaflet-div-icon leaflet-editing-icon my-own-class'
+             iconSize: new L.Point(20, 20),
+             className: 'leaflet-div-icon leaflet-editing-icon my-own-icon'
         })
     }
-);
+});
+L.Edit.PolyVerticesEdit = L.Edit.PolyVerticesEdit.extend({
+    options : {
+        icon: new L.DivIcon({
+             iconSize: new L.Point(20, 20),
+             className: 'leaflet-div-icon leaflet-editing-icon my-own-icon'
+        })
+    }
+});
      map.addControl(drawControl);
      map.on(L.Draw.Event.CREATED, function (event) {
         var layer = event.layer;
