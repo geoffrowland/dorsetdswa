@@ -780,14 +780,6 @@
     // FeatureGroup is to store editable layers
      var drawnItems = new L.FeatureGroup();
      map.addLayer(drawnItems);
-     L.Edit.Poly = L.Edit.Poly.extend({
-      options : {
-        icon: new L.DivIcon({
-             iconSize: new L.Point(5, 5),
-             className: 'leaflet-div-icon leaflet-editing-icon my-own-icon'
-        })
-       }
-      });
      var drawControl = new L.Control.Draw({
 	 			draw: {
 				polygon: {
@@ -819,6 +811,14 @@
              featureGroup: drawnItems
          }
      });
+     drawControl.setDrawingOptions(
+     polyline: {
+        icon: new L.DivIcon({
+            iconSize: new L.Point(5, 5),
+            className: 'leaflet-div-icon leaflet-editing-icon my-own-class'
+        })
+    }
+);
      map.addControl(drawControl);
      map.on(L.Draw.Event.CREATED, function (event) {
         var layer = event.layer;
