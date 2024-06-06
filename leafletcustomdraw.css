@@ -1,0 +1,13 @@
+.leaflet-div-icon {
+  background-color: #f4f4f4;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.leaflet-editing-icon {
+  background-color: #f4f4f4;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: inline-block;
+}
