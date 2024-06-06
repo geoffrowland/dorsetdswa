@@ -812,6 +812,14 @@
         var layer = event.layer;
         drawnItems.addLayer(layer);
       });
+      L.Edit.Poly = L.Edit.Poly.extend({
+      options : {
+        icon: new L.DivIcon({
+             iconSize: new L.Point(20, 20),
+             className: 'leaflet-div-icon leaflet-editing-icon my-own-icon'
+        })
+       }
+      });
       L.easyButton('fa-download', function(btn, map){
 	  var downloadData = JSON.stringify(drawnItems.toGeoJSON(), null, 2);
 	  var blob = new Blob([downloadData], {type: "text/json;charset=utf-8"});
