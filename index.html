@@ -837,7 +837,7 @@ L.Edit.PolyVerticesEdit = L.Edit.PolyVerticesEdit.extend({
 	  var downloadData = JSON.stringify(drawnItems.toGeoJSON(), null, 2);
 	  var blob = new Blob([downloadData], {type: "text/json;charset=utf-8"});
           saveAs(blob, "map.geojson");
-      }).addTo( map );
+      },'Download GeoJSON').addTo( map );
  	
     var site = omnivore.csv('site.csv', null, siteData).on('ready', function() {}).addTo(map);
 	
